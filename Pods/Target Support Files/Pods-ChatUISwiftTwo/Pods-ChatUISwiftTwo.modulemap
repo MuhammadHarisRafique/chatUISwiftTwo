@@ -1,0 +1,6 @@
+framework module Pods_ChatUISwiftTwo {
+  umbrella header "Pods-ChatUISwiftTwo-umbrella.h"
+
+  export *
+  module * { export * }
+}

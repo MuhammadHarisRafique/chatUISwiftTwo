@@ -12,6 +12,7 @@
 		4D85A2C11FFBCFCF007CDB76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D85A2BF1FFBCFCF007CDB76 /* Main.storyboard */; };
 		4D85A2C31FFBCFCF007CDB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D85A2C21FFBCFCF007CDB76 /* Assets.xcassets */; };
 		4D85A2C61FFBCFCF007CDB76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D85A2C41FFBCFCF007CDB76 /* LaunchScreen.storyboard */; };
+		91796617D7A93E5C8A08A4CF /* Pods_ChatUISwiftTwo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB38C898C0DC196D3228F534 /* Pods_ChatUISwiftTwo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		4D85A2C21FFBCFCF007CDB76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D85A2C51FFBCFCF007CDB76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D85A2C71FFBCFCF007CDB76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63CBA76D940929D0F721ECA0 /* Pods-ChatUISwiftTwo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatUISwiftTwo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatUISwiftTwo/Pods-ChatUISwiftTwo.release.xcconfig"; sourceTree = "<group>"; };
+		BEDFC7A3D28C77FDC9D4F5B3 /* Pods-ChatUISwiftTwo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatUISwiftTwo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatUISwiftTwo/Pods-ChatUISwiftTwo.debug.xcconfig"; sourceTree = "<group>"; };
+		CB38C898C0DC196D3228F534 /* Pods_ChatUISwiftTwo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatUISwiftTwo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91796617D7A93E5C8A08A4CF /* Pods_ChatUISwiftTwo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14D7256EA53702106FFA2113 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEDFC7A3D28C77FDC9D4F5B3 /* Pods-ChatUISwiftTwo.debug.xcconfig */,
+				63CBA76D940929D0F721ECA0 /* Pods-ChatUISwiftTwo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		29C48E01F02E420F149C6A10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB38C898C0DC196D3228F534 /* Pods_ChatUISwiftTwo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4D85A2AF1FFBCFCE007CDB76 = {
 			isa = PBXGroup;
 			children = (
 				4D85A2BA1FFBCFCE007CDB76 /* ChatUISwiftTwo */,
 				4D85A2B91FFBCFCE007CDB76 /* Products */,
+				14D7256EA53702106FFA2113 /* Pods */,
+				29C48E01F02E420F149C6A10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D85A2CA1FFBCFCF007CDB76 /* Build configuration list for PBXNativeTarget "ChatUISwiftTwo" */;
 			buildPhases = (
+				2374386A3F123FC40792E38C /* [CP] Check Pods Manifest.lock */,
 				4D85A2B41FFBCFCE007CDB76 /* Sources */,
 				4D85A2B51FFBCFCE007CDB76 /* Frameworks */,
 				4D85A2B61FFBCFCE007CDB76 /* Resources */,
+				3F1F05BEA7F074E07B33ED9C /* [CP] Embed Pods Frameworks */,
+				F61D182F98CA7F2FB9825E80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2374386A3F123FC40792E38C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatUISwiftTwo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F1F05BEA7F074E07B33ED9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatUISwiftTwo/Pods-ChatUISwiftTwo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatUISwiftTwo/Pods-ChatUISwiftTwo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F61D182F98CA7F2FB9825E80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatUISwiftTwo/Pods-ChatUISwiftTwo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D85A2B41FFBCFCE007CDB76 /* Sources */ = {
@@ -249,6 +332,7 @@
 		};
 		4D85A2CB1FFBCFCF007CDB76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEDFC7A3D28C77FDC9D4F5B3 /* Pods-ChatUISwiftTwo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChatUISwiftTwo/Info.plist;
@@ -260,6 +344,7 @@
 		};
 		4D85A2CC1FFBCFCF007CDB76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63CBA76D940929D0F721ECA0 /* Pods-ChatUISwiftTwo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChatUISwiftTwo/Info.plist;
