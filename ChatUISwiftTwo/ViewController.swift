@@ -73,13 +73,42 @@ class ViewController:JSQMessagesViewController {
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
         
         let bubbleFactory = JSQMessagesBubbleImageFactory()
+       
+        let message = self.messages[indexPath.row]
         
+        if  message.senderId == self.currentUser.id{
+        
+         return bubbleFactory.outgoingMessagesBubbleImageWithColor(UIColor.blackColor())
+        
+        
+        }else{
+        
+        return bubbleFactory.incomingMessagesBubbleImageWithColor(UIColor.redColor())
+        }
      
-        
-        return bubbleFactory.incomingMessagesBubbleImageWithColor(UIColor.greenColor())
-        
     }
     
+    private func receivingmessage(){
+    
+         let message = JSQMessage(senderId: "2", displayName: "Rehan", text: "great")
+        
+        self.messages.append(message)
+        finishReceivingMessage()
+        
+    
+    }
+    
+
+    
+    override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+        
+        let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
+        self.messages.append(message)
+       
+        finishSendingMessage()
+         self.receivingmessage()
+        
+    }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
         return nil
