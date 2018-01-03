@@ -85,5 +85,17 @@ class ViewController:JSQMessagesViewController {
         return nil
     }
 
+    override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
+    
+        let message = self.messages[indexPath.row]
+        let user = message.senderDisplayName
+        return NSAttributedString(string: user)
+        
+        
+    }
+    override func collectionView(collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return 15
+    }
+    
 }
 
